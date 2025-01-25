@@ -1,0 +1,47 @@
+# Ignore Visual Studio folders
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.suo
+*.user
+*.userprefs
+*.opensdf
+*.sdf
+
+# Ignore temporary and cache files
+Saved/
+Intermediate/
+DerivedDataCache/
+
+# Ignore binary files
+*.pdb
+*.exe
+*.dll
+*.lib
+*.app
+*.dylib
+*.suo
+*.user
+*.userprefs
+*.opensdf
+*.sdf
+*.ipch
+*.log
+*.obj
+*.cache
+*.csproj
+*.vcxproj
+*.vcxproj.filters
+
+# Ignore entire Content folder but exclude .uasset for Blueprints and code-related assets
+Content/*
+!Content/**/*.uasset
+
+# Ignore StaticMeshes and other assets, even if they are .uasset files
+Content/StaticMeshes/*
+Content/Textures/*
+Content/Materials/*
+Content/Animations/*
+Content/Sounds/*
+Content/SimBlank/*
+Content/VigilanteContent/*
