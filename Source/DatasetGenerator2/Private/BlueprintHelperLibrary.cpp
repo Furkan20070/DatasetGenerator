@@ -12,6 +12,7 @@
 #include "Engine/StaticMesh.h"
 #include "Misc/Paths.h"
 #include "RenderUtils.h"
+#include "GenericPlatform/GenericPlatformChunkInstall.h"
 
 
 void UBlueprintHelperLibrary::WriteTextFile(FString filename, FString content)
@@ -265,3 +266,14 @@ bool UBlueprintHelperLibrary::GetStaticMeshScreenBoundsAccurate(const UStaticMes
     BottomRight = MaxScreen;
     return true;
 }
+
+void UBlueprintHelperLibrary::ConvertToYOLOFormat(const FVector2D& upperLeft, const FVector2D& lowerRight, const float& resolutionX, const float& resolutionY, FVector2D& outBoundingBoxMid, FVector2D& boundingBoxExtends)
+{
+    outBoundingBoxMid.X = ((upperLeft.X + lowerRight.X) / 2.0f) / resolutionX;
+    outBoundingBoxMid.Y = ((upperLeft.Y + lowerRight.Y) / 2.0f) / resolutionY;
+    boundingBoxExtends.X = ((lowerRight.X - upperLeft.X) / 2.0f) / resolutionX;
+    boundingBoxExtends.Y = ((lowerRight.Y - upperLeft.Y) / 2.0f) / resolutionY;
+    
+}
+
+

@@ -46,4 +46,7 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "Helper|Bounding Box")
     static bool GetStaticMeshScreenBoundsAccurate(const UStaticMeshComponent* MeshComponent, FVector2D& TopLeft, FVector2D& BottomRight);
+
+    UFUNCTION(BlueprintCallable, Category = "Helper|Annotation Formats")
+    static void ConvertToYOLOFormat(const FVector2D& upperLeft, const FVector2D& lowerRight, const float& resolutionX, const float& resolutionY, FVector2D& outBoundingBoxMid, FVector2D& boundingBoxExtends);
 };
