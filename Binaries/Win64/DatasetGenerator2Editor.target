@@ -12,8 +12,8 @@
 	{
 		"MajorVersion": 5,
 		"MinorVersion": 5,
-		"PatchVersion": 3,
-		"Changelist": 39772772,
+		"PatchVersion": 1,
+		"Changelist": 38445549,
 		"CompatibleChangelist": 37670630,
 		"IsLicenseeVersion": 0,
 		"IsPromotedBuild": 0,
@@ -21,6 +21,50 @@
 		"BuildId": "37670630"
 	},
 	"BuildProducts": [
+		{
+			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor-DatasetGenerator2.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor-DatasetGenerator2.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntimeFBX/Binaries/Win64/UnrealEditor-glTFRuntimeFBX.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntimeFBX/Binaries/Win64/UnrealEditor-glTFRuntimeFBX.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntimeFBX/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntime/Binaries/Win64/UnrealEditor-glTFRuntime.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntime/Binaries/Win64/UnrealEditor-glTFRuntime.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntime/Binaries/Win64/UnrealEditor-glTFRuntimeEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntime/Binaries/Win64/UnrealEditor-glTFRuntimeEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntime/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
 		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/USD/UsdResources/Win64/plugins/ar/resources/plugInfo.json",
 			"Type": "RequiredResource"
@@ -4892,21 +4936,21 @@
 		{
 			"Path": "$(EngineDir)/Plugins/XGEController/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
-		},
-		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor-DatasetGenerator2.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor-DatasetGenerator2.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
 		}
 	],
 	"RuntimeDependencies": [
+		{
+			"Path": "$(ProjectDir)/DatasetGenerator2.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntimeFBX/glTFRuntimeFBX.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/glTFRuntime/glTFRuntime.uplugin",
+			"Type": "UFS"
+		},
 		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/DbgHelp/dbghelp.dll",
 			"Type": "NonUFS"
@@ -30710,10 +30754,6 @@
 		{
 			"Path": "$(EngineDir)/Plugins/XGEController/XGEController.uplugin",
 			"Type": "UFS"
-		},
-		{
-			"Path": "$(ProjectDir)/DatasetGenerator2.uproject",
-			"Type": "UFS"
 		}
 	],
 	"BuildPlugins": [
@@ -30918,7 +30958,9 @@
 		"WorldPartitionHLODUtilities",
 		"XCodeSourceCodeAccess",
 		"XGEController",
-		"XInputDevice"
+		"XInputDevice",
+		"glTFRuntime",
+		"glTFRuntimeFBX"
 	],
 	"AdditionalProperties": [
 		{
